@@ -16,7 +16,7 @@
     expected_nodes: |-
       {{
         (
-          ( groups['master'] | default([]) ) +
+          ( groups['k3s_control'] | default([]) ) +
           ( groups['node'] | default([]) )
         )
         | unique
