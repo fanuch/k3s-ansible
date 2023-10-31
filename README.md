@@ -1,5 +1,13 @@
 # Automated build of HA k3s Cluster with `kube-vip` and MetalLB
 
+## TLDR
+Run:
+```
+ansible-playbook -i ~/Git/3m-proxmox-vm/ansible/inventory -i inventory/my-cluster --vault-password-file ~/Git/3m-proxmox-vm/ansible/playbooks/password.txt site.yml
+```
+
+This points to a vault, with a password file, and a dynamic library that queries proxmox API
+
 ![Fully Automated K3S etcd High Availability Install](https://img.youtube.com/vi/CbkEWcUZ7zM/0.jpg)
 
 This playbook will build an HA Kubernetes cluster with `k3s`, `kube-vip` and MetalLB via `ansible`.
